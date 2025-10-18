@@ -6,14 +6,10 @@ automatic_scaling:
   max_instances: 1   # ggf. 2, wenn Trafficspitzen
 
 env_variables:
-
-  PORT: 3000
-  DEBUG_LOGGING: 1
-  JWT_SECRET: "{<w8.&n9F+TgEC6T2?2rxK68,$&a&qs5"
-  SENDGRID_API_KEY: "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"
-  VERIFIED_SENDER_EMAIL: "noreply@kiermeyer.work"
-  FRONTEND_URL: "http://localhost:5000"
-  CLOUDINARY_CLOUD_NAME: "dveehdj7n"
-  CLOUDINARY_API_SECRET: "AZyS15KcMquTk-QkRrc-NXC2h6g"
-  CLOUDINARY_API_KEY: "871969675288917"
-  CLOUDINARY_URL: "cloudinary://871969675288917:AZyS15KcMquTk-QkRrc-NXC2h6g@dveehdj7n"
+  DATABASE_URL: "projects/gen-lang-client-0415367105/secrets/DATABASE_URL/versions/latest"
+  SENDGRID_API_KEY: "projects/gen-lang-client-0415367105/secrets/SENDGRID_API_KEY/versions/latest"
+  JWT_SECRET: "projects/gen-lang-client-0415367105/secrets/JWT_SECRET/versions/latest"
+  CLOUDINARY_URL: "projects/gen-lang-client-0415367105/secrets/CLOUDINARY_URL/versions/latest"
+  FRONTEND_URL: "projects/gen-lang-client-0415367105/secrets/FRONTEND_URL/versions/latest"
+  VERIFIED_SENDER_EMAIL: "projects/gen-lang-client-0415367105/secrets/VERIFIED_SENDER_EMAIL/versions/latest"
+  DEBUG_LOGGING: "1"
