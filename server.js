@@ -8,6 +8,17 @@ const helmet = require('helmet');
 
 // Load environment variables
 dotenv.config();
+
+
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(cors()); // Allow Cross-Origin requests
+app.use(helmet()); // Adds security headers
+app.use(express.json()); // Enable parsing of JSON in the request body
+
 app.set('trust proxy', 1);
 // General API rate limiter
 const limiter = rateLimit({
@@ -18,14 +29,6 @@ const limiter = rateLimit({
     message: 'Too many requests from this IP, please try again after 15 minutes',
 });
 
-
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Middleware
-app.use(cors()); // Allow Cross-Origin requests
-app.use(helmet()); // Adds security headers
-app.use(express.json()); // Enable parsing of JSON in the request body
 app.use(limiter); // Apply the general rate limiter to all requests
 
 // Import routes
