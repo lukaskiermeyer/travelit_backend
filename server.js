@@ -8,7 +8,7 @@ const helmet = require('helmet');
 
 // Load environment variables
 dotenv.config();
-
+app.set('trust proxy', 1);
 // General API rate limiter
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
