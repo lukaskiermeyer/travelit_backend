@@ -4,3 +4,12 @@ instance_class: F1
 automatic_scaling:
   min_instances: 0
   max_instances: 1   # ggf. 2, wenn Trafficspitzen
+
+env_variables:
+  # Referenziere die Secrets mit ihrem vollen Ressourcennamen
+  DATABASE_URL: "projects/gen-lang-client-0415367105/secrets/DATABASE_URL/versions/latest"
+  SENDGRID_API_KEY: "projects/gen-lang-client-0415367105/secrets/SENDGRID_API_KEY/versions/latest"
+  JWT_SECRET: "projects/gen-lang-client-0415367105/secrets/JWT_SECRET/versions/latest"
+  CLOUDINARY_URL: "projects/gen-lang-client-0415367105/secrets/CLOUDINARY_URL/versions/latest"
+  FRONTEND_URL: "projects/gen-lang-client-0415367105/secrets/FRONTEND_URL/versions/latest"
+  VERIFIED_SENDER_EMAIL: "projects/gen-lang-client-0415367105/secrets/VERIFIED_SENDER_EMAIL/versions/latest"
