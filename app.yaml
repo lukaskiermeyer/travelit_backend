@@ -6,6 +6,7 @@ automatic_scaling:
   max_instances: 1   # ggf. 2, wenn Trafficspitzen
 
 env_variables:
+
   PORT: 3000
   DEBUG_LOGGING: 1
   JWT_SECRET: "{<w8.&n9F+TgEC6T2?2rxK68,$&a&qs5"
